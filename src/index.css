@@ -1,0 +1,87 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 10% 15%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 12%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 12%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 252 89% 74%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 320 90% 60%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 240 4% 25%;
+    --muted-foreground: 240 5% 65%;
+
+    --accent: 199 84% 57%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 50.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 4% 30%;
+    --input: 240 4% 25%;
+    --ring: 252 89% 74%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-retro-dark text-foreground;
+    background-image: radial-gradient(rgba(155, 135, 245, 0.1) 1px, transparent 1px);
+    background-size: 30px 30px;
+  }
+
+  /* Custom classes */
+  .pixel-borders {
+    box-shadow: 
+      0 0 0 2px #1A1F2C,
+      0 0 0 4px #9b87f5;
+  }
+  
+  .neon-text {
+    text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #9b87f5, 0 0 42px #9b87f5;
+  }
+  
+  .neon-border {
+    box-shadow: 0 0 5px #9b87f5, 0 0 10px #9b87f5, inset 0 0 5px #9b87f5;
+  }
+  
+  .crt-effect::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%);
+    background-size: 100% 4px;
+    pointer-events: none;
+    z-index: 10;
+  }
+}
+
+#root {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
